@@ -25,17 +25,17 @@ const styles = StyleSheet.create({
           justifyContent: 'center',
           alignItems: 'center',
      },
-     formDiv:{
+     // formDiv:{
           
-          display:"flex",
-          flexDirection: 'column',
-          justifyContent: "center",
-          backgroundColor: 'rgba(255, 255, 255, 0.1)',
-          boxshadow: '20px 20px 50px rgba(0, 0, 0, 0.5)',
-          borderRadius: 10,
-          height:500,
-          width: 300,
-          padding:30
-     }
+     //      display:"flex",
+     //      flexDirection: 'column',
+     //      justifyContent: "center",
+     //      backgroundColor: 'rgba(255, 255, 255, 0.1)',
+     //      boxshadow: '20px 20px 50px rgba(0, 0, 0, 0.5)',
+     //      borderRadius: 10,
+     //      height:500,
+     //      width: 300,
+     //      padding:30
+     // }
 })
-"hsla(0, 0%, 10%, 0.5)";
+// "hsla(0, 0%, 10%, 0.5)";
