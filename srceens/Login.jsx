@@ -1,15 +1,19 @@
 import { View, Text, Image, TextInput, SafeAreaView, StyleSheet, Dimensions, Switch} from 'react-native'
 import React, {useState} from 'react'
-import { RectButton } from './Buttons'
+import {useNavigation} from '@react-navigation/native'
+import { RectButton } from '../components/Buttons'
 import image from '../assets/images/loginImg.png'
 import google from '../assets/images/Google.png'
 import facebook from '../assets/images/Facebook.png'
 import Apple from '../assets/images/AppleId.png'
+import FocusedStatusBar from '../components/FocusedStatusBar'
 const Login = () => {
      const [isEnabled, setIsEnabled] = useState(false);
      const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+     const navigation = useNavigation()
      return (
           <View>
+               <FocusedStatusBar background ='black' />
               <View>
                     <Image source={image} resizeMode='cover' style={{width: Dimensions.get("screen").width, height: 250}} />
               </View>
@@ -21,7 +25,7 @@ const Login = () => {
                          <Switch trackColor={{false: '#767577', true: '#7B16FF'}}thumbColor={isEnabled ? '#3e3e3e' : '#f4f3f4'}ios_backgroundColor="#3e3e3e"onValueChange={toggleSwitch}value={isEnabled} />
                          <Text>Forgot Password?</Text>
                     </View>
-                    <RectButton title='Login' fontSize={20} />
+                    <RectButton title='Login' fontSize={20}  handlePress= {() => navigation.navigate('Home')} />
                     <View style={{marginTop: 20}}>
                          <Text style={{textAlign: "center",textTransform: 'uppercase', fontSize: 20, fontWeight:"400"}}>OR</Text>
                          <Text style={{textAlign: "center"}}>Login with</Text>

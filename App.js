@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
 import Home from './srceens/Home';
+import Login from './srceens/Login';
 const theme = {
      ...DefaultTheme,
      colors: {
@@ -16,7 +17,7 @@ export default function App() {
      <NavigationContainer theme={theme} >
           <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName = "Home" >
                <Stack.Screen name = "Home" component={Home} />
-               {/* <Stack.Screen name='Details' component={Details} /> */}
+               <Stack.Screen name='Login' component={Login} />
           </Stack.Navigator>
      </NavigationContainer>
   );
