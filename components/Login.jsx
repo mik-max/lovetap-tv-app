@@ -31,7 +31,7 @@ const Login = () => {
                          <Image source={Apple} style={{width: 40, height:40}} />
                          <Image source={facebook} style={{width: 40, height:40}} />
                     </View>
-                    <Text style={{textAlign: "center", marginTop:10}}>Don't have an account? <Text style={{color: 'blue', textDecorationLine:"underline", }}>Register now</Text></Text>
+                    <Text style={{textAlign: "center", marginTop:10}}>Don't have an account? <Text style={{color: 'blue', textDecorationLine:"underline", }}>Register Now</Text></Text>
                </View>
           </View>
      )
