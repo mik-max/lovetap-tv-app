@@ -3,15 +3,16 @@ import React from 'react'
 import { assets } from '../constants'
 import Header from '../components/Header'
 import { RectButton } from '../components/Buttons'
+import Footer from '../components/Footer'
 import Login from '../components/Login'
 import FocusedStatusBar from '../components/FocusedStatusBar'
 
 export default function Home() {
-     const image = {uri: 'https://res.cloudinary.com/mike-ik/image/upload/v1686595217/Login_f4simg.png'};
      return (
           <SafeAreaView style={styles.container}>
                <FocusedStatusBar background ='black' />
-               <Login/>
+               {/* <Login/> */}
+               <Footer/>
           </SafeAreaView>
      )
 }
