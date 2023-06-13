@@ -3,6 +3,7 @@ import React from 'react'
 import { assets } from '../constants'
 import Header from '../components/Header'
 import { RectButton } from '../components/Buttons'
+import Login from '../components/Login'
 import FocusedStatusBar from '../components/FocusedStatusBar'
 
 export default function Home() {
@@ -10,20 +11,7 @@ export default function Home() {
      return (
           <SafeAreaView style={styles.container}>
                <FocusedStatusBar background ='black' />
-               <ImageBackground source={image} resizeMode = 'cover' style={styles.image}>
-                    <View style={styles.formDiv}>
-                         <Text style={{fontSize: 20, fontWeight: "800", color:"white"}}>Sign In</Text>
-                         <Text style={{paddingTop: 10, color: "white"}}>New user? <Text style={{fontWeight: '600'}}>Create an account</Text></Text>
-                         <View style={{marginTop: 35, }} >
-                              <TextInput placeholder='Email address' style={{backgroundColor: 'white', borderRadius: 50, padding: 10, marginBottom: 10,}}  />
-                              <TextInput placeholder='Password' style={{backgroundColor: 'white', borderRadius: 50, padding: 10, marginBottom: 10}}  />
-                              <RectButton title='Login' fontSize={20} />
-                         </View>
-                    </View>
-                    
-                    
-               </ImageBackground>
-              
+               <Login/>
           </SafeAreaView>
      )
 }
