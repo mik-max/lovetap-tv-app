@@ -20,10 +20,13 @@ const Live = () => {
                     <ScrollView>
                          <View>
                               <Text style={{textAlign: 'center', fontSize: 17, fontWeight: '500', paddingVertical:10}} >Live TV Transmission</Text>
-                         <Vimeo videoId={'3420837'}params={'api=1&autoplay=0'}handlers={videoCallbacks} style={{width: Dimensions.get('screen').width, height:240}} allowsFullscreenVideo={true} />
+                              <Vimeo videoId={'3420837'}params={'api=1&autoplay=0'}handlers={videoCallbacks} style={{width: Dimensions.get('screen').width, height:240}} allowsFullscreenVideo={true} />
                          </View>
                          <View style={{padding:10}}>
                               <Text style={{fontSize:18, fontWeight:"bold", paddingVertical: 15}}>Comments</Text>
+                              <CommentCard/>
+                              <CommentCard/>
+                              <CommentCard/>
                               <CommentCard/>
                          </View>
                     </ScrollView>
