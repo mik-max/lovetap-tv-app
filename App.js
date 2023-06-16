@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { PaperProvider } from "react-native-paper";
 import { StyleSheet, Text, View } from 'react-native';
 import Home from './srceens/Home';
 import Signup from './srceens/SignUp';
@@ -15,13 +16,16 @@ const theme = {
 const Stack = createStackNavigator();
 export default function App() {
   return (
-     <NavigationContainer theme={theme} >
-          <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName = "Signup" >
-               <Stack.Screen name = "Home" component={Home} />
-               <Stack.Screen name='Login' component={Login} />
-                <Stack.Screen name="Signup" component={Signup} />
-          </Stack.Navigator>
-     </NavigationContainer>
+     <PaperProvider>
+          <NavigationContainer theme={theme} >
+               <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName = "Signup" >
+                    <Stack.Screen name = "Home" component={Home} />
+                    <Stack.Screen name='Login' component={Login} />
+                    <Stack.Screen name="Signup" component={Signup} />
+               </Stack.Navigator>
+          </NavigationContainer>
+     </PaperProvider>
+ 
   );
 }
 
