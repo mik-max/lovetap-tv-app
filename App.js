@@ -6,6 +6,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import Home from './srceens/Home';
 import Signup from './srceens/SignUp';
 import Login from './srceens/Login';
+import Live from './srceens/Live';
+import Profile from './srceens/Profile';
+import News from './srceens/News';
+import Give from './srceens/Give';
+
 const theme = {
      ...DefaultTheme,
      colors: {
@@ -16,16 +21,17 @@ const theme = {
 const Stack = createStackNavigator();
 export default function App() {
   return (
-     <PaperProvider>
-          <NavigationContainer theme={theme} >
-               <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName = "Signup" >
-                    <Stack.Screen name = "Home" component={Home} />
-                    <Stack.Screen name='Login' component={Login} />
-                    <Stack.Screen name="Signup" component={Signup} />
-               </Stack.Navigator>
-          </NavigationContainer>
-     </PaperProvider>
- 
+     <NavigationContainer theme={theme} >
+          <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName = "Home" >
+               <Stack.Screen name = "Home" component={Home} />
+               <Stack.Screen name='Login' component={Login} />
+               <Stack.Screen name="Signup" component={Signup} />
+               <Stack.Screen name='News' component={News} />
+               <Stack.Screen name='Live' component={Live} />
+               <Stack.Screen name='Profile' component={Profile} />
+               <Stack.Screen name='Give' component={Give} />
+          </Stack.Navigator>
+     </NavigationContainer>
   );
 }
 
