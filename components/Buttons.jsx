@@ -1,8 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 export const RectButton = ({minWidth, fontSize, handlePress, title,...props}) => {
      return (
-        <TouchableOpacity style = {{
-             
+        <TouchableOpacity style = {{    
              backgroundColor: '#7B16FF',
              borderRadius: 50,
              minWidth: 150,
