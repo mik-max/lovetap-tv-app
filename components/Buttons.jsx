@@ -3,8 +3,7 @@ import AntDesignIcon from 'react-native-vector-icons/AntDesign'
 
 export const RectButton = ({minWidth, fontSize, handlePress, title,...props}) => {
      return (
-        <TouchableOpacity style = {{
-             
+        <TouchableOpacity style = {{    
              backgroundColor: '#7B16FF',
              borderRadius: 50,
              minWidth: 150,
