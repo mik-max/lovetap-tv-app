@@ -29,7 +29,7 @@ export const BackButton = ({ iconColor, handlePress,...props}) => {
            justifyContent: "center",
            alignItems: "center",
            marginLeft: 10,
-           marginTop: 30,
+           marginTop: 10,
            marginBottom: 10,
            ...props,
          }}

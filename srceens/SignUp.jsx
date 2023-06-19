@@ -1,6 +1,7 @@
 import { View, Text, Image,TextInput, SafeAreaView, StyleSheet, Dimensions, Switch} from 'react-native'
 // import {} from 'react-native-paper'
 import React, {useState} from 'react'
+import { useLinkTo, useNavigation } from '@react-navigation/native';
 import FocusedStatusBar from "../components/FocusedStatusBar";
 import { BackButton } from '../components/Buttons';
 import image from "../assets/images/logina.jpg";
@@ -9,14 +10,16 @@ import facebook from "../assets/images/Facebook.png";
 import Apple from "../assets/images/AppleId.png";
 import { RectButton } from '../components/Buttons';
 import Icon from 'react-native-vector-icons/Ionicons';
- import { Formik, Form, Field, FormikProvider } from "formik";
- import * as Yup from "yup";
+
 
 import {validateEmail, validatePassword} from '../utilities/validations'
 
 
 
 export default function Signup() {
+
+  const linkTo = useLinkTo();
+  const navigation = useNavigation()
 
   const signUpData = {
     fullName: fullNameInputValue,
@@ -37,7 +40,7 @@ export default function Signup() {
 
     const [passwordIsValid, setPasswordIsValid] = useState(true)
     const [passwordVisible, setPasswordVisible] = useState(true)
-    const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(true)
+    
 
     const [passwordInputValue, setPasswordInputValue] = useState("");
     const handlePasswordChange = (text) => {
@@ -51,7 +54,7 @@ export default function Signup() {
       }else{setPasswordStrenghtText("Weak Password***");}
     }
 
-
+    const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(true);
     const [passwordConfirmValue, setPasswordConfirmValue] = useState("");
     const handleConfirmChange = (text) => {
       setPasswordConfirmValue(text);
@@ -77,11 +80,11 @@ export default function Signup() {
           navigation.goBack();
         }}
       />
-      <View style={{ alignItems: "center" }}>
+      <View style={{ alignItems: "center", backgroundColor: "#DFE7EF", paddingVertical:5 }}>
         <Image
           source={image}
           resizeMode="cover"
-          style={{ width: 258, height: 248 }}
+          style={{ width: 258, height: 248, borderRadius:80 }}
         />
       </View>
       <Text
@@ -95,7 +98,7 @@ export default function Signup() {
       >
         Signup
       </Text>
-     
+
       <View style={{ paddingHorizontal: 20 }}>
         <TextInput
           placeholder="Full Name"
@@ -145,7 +148,7 @@ export default function Signup() {
             }}
             name={passwordVisible ? "eye" : "eye-off"}
             style={styles.eyeIcon}
-            color="#000"
+            color="#24292E"
             size={20}
           />
         </View>
@@ -179,7 +182,7 @@ export default function Signup() {
             }}
             name={confirmPasswordVisible ? "eye" : "eye-off"}
             style={styles.eyeIcon}
-            color="#000"
+            color="#24292E"
             size={20}
           />
         </View>
@@ -198,7 +201,7 @@ export default function Signup() {
           <></>
         )}
 
-        <RectButton title="Signup" fontSize={20} onPress={handleButtonPress} />
+        <RectButton title="Signup" fontSize={20} onPress={linkTo("/Home")} />
       </View>
       <View style={{ marginTop: 20 }}>
         <Text
@@ -228,7 +231,10 @@ export default function Signup() {
       </View>
       <Text style={{ textAlign: "center", marginTop: 10 }}>
         Already have an account?{" "}
-        <Text style={{ color: "blue", textDecorationLine: "underline" }}>
+        <Text
+          style={{ color: "blue", textDecorationLine: "underline" }}
+          onPress={() => navigation.navigate("Login")}
+        >
           Login Now
         </Text>
       </Text>

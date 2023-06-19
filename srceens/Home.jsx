@@ -1,12 +1,13 @@
 import { View, Text, SafeAreaView, StyleSheet,  ScrollView, FlatList, Dimensions } from 'react-native'
 import React from 'react'
-import { assets } from '../constants'
 import Header from '../components/Header'
 
 import Footer from '../components/Footer'
 import FocusedStatusBar from '../components/FocusedStatusBar'
 import CarouselCardItem from '../components/CarouselCardItem'
 import data from '../constants/dummy'
+
+
 export default function Home() {
      return (
           <SafeAreaView style={{flex: 1}}>

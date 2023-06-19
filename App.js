@@ -10,6 +10,8 @@ import Live from './srceens/Live';
 import Profile from './srceens/Profile';
 import News from './srceens/News';
 import Give from './srceens/Give';
+import * as Font from "expo-font";
+import { useEffect } from 'react';
 
 const theme = {
      ...DefaultTheme,
@@ -20,9 +22,15 @@ const theme = {
 }
 const Stack = createStackNavigator();
 export default function App() {
+     //   useEffect(() => {
+     //     // Load the custom font
+     //     Font.loadAsync({
+     //       'DMSans-Regular': require("./assets/fonts/DMSans-Regular.ttf"),
+     //     });
+     //   }, []);
   return (
      <NavigationContainer theme={theme} >
-          <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName = "Home" >
+          <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName = "Login" >
                <Stack.Screen name = "Home" component={Home} />
                <Stack.Screen name='Login' component={Login} />
                <Stack.Screen name="Signup" component={Signup} />

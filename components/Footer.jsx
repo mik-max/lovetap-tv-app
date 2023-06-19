@@ -22,7 +22,7 @@ const Footer = () => {
           <TouchableOpacity style={{width: 45, height: 45, borderRadius: 50, display:'flex', justifyContent:'center', alignItems:'center', backgroundColor:'#7B16FF'}}  onPress={() => {handlePress('Live')}} >
                <FeatherIcon name="tv" size={30} color="white"  />
           </TouchableOpacity>
-          <TouchableOpacity style={{width: 45, height: 45, borderRadius: 50, display:'flex', justifyContent:'center', alignItems:'center', }}  onPress={() => {handlePress('give')}}>
+          <TouchableOpacity style={{width: 45, height: 45, borderRadius: 50, display:'flex', justifyContent:'center', alignItems:'center', }}  onPress={() => {handlePress('Give')}}>
                <EntypoIcon name="heart" size={30} color="gray"  />
           </TouchableOpacity>
           <TouchableOpacity style={{width: 45, height: 45, borderRadius: 50, display:'flex', justifyContent:'center', alignItems:'center', }}  onPress={() => {handlePress('Profile')}}>
